@@ -34,4 +34,8 @@ public class ProjectTaskController {
         //So until here, my create operation is fnished. And made sure, that summary is not empty
         return new ResponseEntity<ProjectTask>(newProjectTask, HttpStatus.CREATED);
     }
+    @GetMapping("/all")
+    public Iterable<ProjectTask>getAllProjectTasks(){
+        return projectTaskService.findAll();
+    }
 }
