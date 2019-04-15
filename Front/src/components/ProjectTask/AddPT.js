@@ -11,11 +11,17 @@ class AddPT extends Component {
     this.state = {
       summary: '',
       acceptanceCriteria: '',
-      status: ''
+      status: '',
+      errors: {}
     };
     this.onChange = this.onChange.bind(this);
     //after onChange should get the onSubmit content in const below
     this.onSubmit = this.onSubmit.bind(this);
+  }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.errors) {
+      this.setState({ errors: nextProps.errors });
+    }
   }
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value }); //e for event, so a array of targets
@@ -31,6 +37,7 @@ class AddPT extends Component {
     this.props.addPT(newProjectTask, this.props.history);
   }
   render() {
+    const { errors } = this.state;
     return (
       <div className="addPT">
         <div className="container">
@@ -46,12 +53,19 @@ class AddPT extends Component {
                 <div className="form-group">
                   <input
                     type="text"
-                    className="form-control form-control-lg"
+                    className={classnames('form-control form-control-lg', {
+                      // makes the box red
+                      'is-invalid': errors.summary
+                    })}
                     name="summary" //should be the same like in server
                     value={this.state.summary}
                     placeholder="Project Task summary"
                     onChange={this.onChange}
                   />
+                  {/* gives feedback, which is defined in backend @NotBlank */}
+                  {errors.summary && (
+                    <div className="invalid-feedback">{errors.summary}</div>
+                  )}
                 </div>
                 <div className="form-group">
                   <textarea
