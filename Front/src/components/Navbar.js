@@ -5,7 +5,7 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-sm navbar-dark bg-primary mb-4">
       <div className="container">
         <a className="navbar-brand" href="Dashboard.html">
-          Project Task Tool
+          MaCha
         </a>
         <button
           className="navbar-toggler"
