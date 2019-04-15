@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addPT } from '../../actions/projectTaskActions';
+import classnames from 'classnames';
 
 class AddPT extends Component {
   constructor() {
@@ -27,7 +28,6 @@ class AddPT extends Component {
       status: this.state.status
     };
 
-    console.log(newProjectTask);
     this.props.addPT(newProjectTask, this.props.history);
   }
   render() {
