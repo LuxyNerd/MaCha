@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import Form from "./Form";
+import React, { Component } from 'react';
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Form from './Form';
 
 class App extends Component {
   state = {
@@ -20,10 +20,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1 className="alert alert-warning">warnings!</h1>
         <Form onChange={fields => this.onChange(fields)} />
-        <p>
-          {JSON.stringify(this.state.fields, null, 2)}
-        </p>
+        <p>{JSON.stringify(this.state.fields, null, 2)}</p>
       </div>
     );
   }
