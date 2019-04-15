@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import PTItem from './ProjectTask/PTItem';
 
 class ProjectBoard extends Component {
   render() {
     return (
       <div className="container">
         <Link to="/addPT" className="btn btn-primary mb-3">
-          <i class="fas fa-plus-circle"> Create Project Task</i>
+          <i className="fas fa-plus-circle"> Create Project Task</i>
         </Link>
         <br />
         <hr />
-        {/* Backlog STARTS HERE  */}
         <div className="container">
           <div className="row">
             <div className="col-md-4">
@@ -19,26 +19,13 @@ class ProjectBoard extends Component {
                   <h3>TO DO</h3>
                 </div>
               </div>
-
-              {/* <!-- SAMPLE PROJECT TASK STARTS HERE --> */}
-              <div className="card mb-1 bg-light">
-                <div className="card-header text-primary">
-                  ID: projectSequence
-                </div>
-                <div className="card-body bg-light">
-                  <h5 className="card-title">summary</h5>
-                  <p className="card-text text-truncate ">acceptanceCriteria</p>
-                  <a href="" className="btn btn-primary">
-                    View / Update
-                  </a>
-
-                  <button className="btn btn-danger ml-4">Delete</button>
-                </div>
-              </div>
-
+              {
+                // <!-- SAMPLE PROJECT TASK STARTS HERE -->
+              }{' '}
+              <PTItem />
               {
                 // <!-- SAMPLE PROJECT TASK ENDS HERE -->
-              }
+              }{' '}
             </div>
             <div className="col-md-4">
               <div className="card text-center mb-2">
@@ -47,9 +34,11 @@ class ProjectBoard extends Component {
                 </div>
               </div>
               {
-                // <!-- SAMPLE PROJECT TASK STARTS HERE -->
+                //     <!-- SAMPLE PROJECT TASK STARTS HERE -->
                 // <!-- SAMPLE PROJECT TASK ENDS HERE -->
               }
+
+              <PTItem />
             </div>
             <div className="col-md-4">
               <div className="card text-center mb-2">
@@ -57,14 +46,16 @@ class ProjectBoard extends Component {
                   <h3>Done</h3>
                 </div>
               </div>
-              {/* <!-- SAMPLE PROJECT TASK STARTS HERE -->
-    
-                        <!-- SAMPLE PROJECT TASK ENDS HERE --> */}
+              {
+                //     <!-- SAMPLE PROJECT TASK STARTS HERE -->
+                // <!-- SAMPLE PROJECT TASK ENDS HERE -->
+              }
             </div>
           </div>
         </div>
-
-        {/* <!-- Backlog ENDS HERE --> */}
+        {
+          //<!-- Backlog ENDS HERE -->
+        }{' '}
       </div>
     );
   }

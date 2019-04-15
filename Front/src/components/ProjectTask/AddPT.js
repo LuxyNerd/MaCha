@@ -1,7 +1,35 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { addPT } from '../../actions/projectTaskActions';
 
 class AddPT extends Component {
+  constructor() {
+    super();
+    this.state = {
+      summary: '',
+      acceptanceCriteria: '',
+      status: ''
+    };
+    this.onChange = this.onChange.bind(this);
+    //after onChange should get the onSubmit content in const below
+    this.onSubmit = this.onSubmit.bind(this);
+  }
+  onChange(e) {
+    this.setState({ [e.target.name]: e.target.value }); //e for event, so a array of targets
+  }
+  onSubmit(e) {
+    e.preventDefault();
+    const newProjectTask = {
+      summary: this.state.summary,
+      acceptanceCriteria: this.state.acceptanceCriteria,
+      status: this.state.status
+    };
+
+    console.log(newProjectTask);
+    this.props.addPT(newProjectTask, this.props.history);
+  }
   render() {
     return (
       <div className="addPT">
@@ -14,13 +42,15 @@ class AddPT extends Component {
               <h4 className="display-4 text-center">
                 Add /Update Project Task
               </h4>
-              <form>
+              <form onSubmit={this.onSubmit}>
                 <div className="form-group">
                   <input
                     type="text"
                     className="form-control form-control-lg"
-                    name="summary"
+                    name="summary" //should be the same like in server
+                    value={this.state.summary}
                     placeholder="Project Task summary"
+                    onChange={this.onChange}
                   />
                 </div>
                 <div className="form-group">
@@ -28,12 +58,16 @@ class AddPT extends Component {
                     className="form-control form-control-lg"
                     placeholder="Acceptance Criteria"
                     name="acceptanceCriteria"
+                    value={this.state.acceptanceCriteria}
+                    onChange={this.onChange}
                   />
                 </div>
                 <div className="form-group">
                   <select
                     className="form-control form-control-lg"
                     name="status"
+                    value={this.state.status}
+                    onChange={this.onChange}
                   >
                     <option value="">Select Status</option>
                     <option value="TO_DO">TO DO</option>
@@ -54,4 +88,16 @@ class AddPT extends Component {
   }
 }
 
-export default AddPT;
+AddPT.propTypes = {
+  addPT: PropTypes.func.isRequired,
+  errors: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  errors: state.errors
+});
+
+export default connect(
+  mapStateToProps,
+  { addPT }
+)(AddPT);
