@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Backlog from './Backlog';
+import Backlog from './ProjectBoard/Backlog';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getBacklog } from '../../actions/backlogActions';
+import { getBacklog } from '../actions/backlogActions';
 
 class ProjectBoard extends Component {
   //constructor to handle errors

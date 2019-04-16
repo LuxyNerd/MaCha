@@ -8,7 +8,7 @@ import AddProject from './components/Project/AddProject';
 import { Provider } from 'react-redux';
 import store from './store';
 import UpdateProject from './components/Project/UpdateProject';
-import ProjectBoard from './components/ProjectBoard/ProjectBoard';
+import ProjectBoard from './components/ProjectBoard';
 import AddProjectTask from './components/ProjectBoard/ProjectTasks/AddProjectTask';
 import UpdateProjectTask from './components/ProjectBoard/ProjectTasks/UpdateProjectTask';
 import Landing from './components/Layout/Landing';
