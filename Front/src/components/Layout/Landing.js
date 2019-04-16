@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 class Landing extends Component {
   componentDidMount() {
     if (this.props.security.validToken) {
-      this.props.history.push("/dashboard");
+      this.props.history.push('/dashboard');
     }
   }
   render() {
@@ -16,11 +16,9 @@ class Landing extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-12 text-center">
-                <h1 className="display-3 mb-4">
-                  Personal Project Management Tool
-                </h1>
+                <h1 className="display-3 mb-4">Have just one!</h1>
                 <p className="lead">
-                  Create your account to join active projects or start your own
+                  Create your account to join in other Social Media Accounts
                 </p>
                 <hr />
                 <Link className="btn btn-lg btn-primary mr-2" to="/register">
