@@ -1,68 +1,82 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { addPT } from '../../actions/projectTaskActions';
 import classnames from 'classnames';
+import { addProjectTask } from '../../../actions/backlogActions';
+import PropTypes from 'prop-types';
 
-class AddPT extends Component {
-  constructor() {
-    super();
+class AddProjectTask extends Component {
+  constructor(props) {
+    super(props);
+    const { id } = this.props.match.params;
+
     this.state = {
       summary: '',
       acceptanceCriteria: '',
       status: '',
+      priority: 0,
+      dueDate: '',
+      projectIdentifier: id,
       errors: {}
     };
     this.onChange = this.onChange.bind(this);
-    //after onChange should get the onSubmit content in const below
     this.onSubmit = this.onSubmit.bind(this);
   }
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({ errors: nextProps.errors });
     }
   }
+
+  // on change
   onChange(e) {
-    this.setState({ [e.target.name]: e.target.value }); //e for event, so a array of targets
+    this.setState({ [e.target.name]: e.target.value });
   }
+  //on submit
   onSubmit(e) {
     e.preventDefault();
-    const newProjectTask = {
+
+    const newTask = {
       summary: this.state.summary,
       acceptanceCriteria: this.state.acceptanceCriteria,
-      status: this.state.status
+      status: this.state.status,
+      priority: this.state.priority,
+      dueDate: this.state.dueDate
     };
 
-    this.props.addPT(newProjectTask, this.props.history);
+    this.props.addProjectTask(
+      this.state.projectIdentifier,
+      newTask,
+      this.props.history
+    );
   }
+
   render() {
+    const { id } = this.props.match.params;
     const { errors } = this.state;
     return (
-      <div className="addPT">
+      <div className="add-PBI">
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <Link to="/" className="btn btn-light">
-                Back to Board
+              <Link to={`/projectBoard/${id}`} className="btn btn-light">
+                Back to Project Board
               </Link>
-              <h4 className="display-4 text-center">
-                Add /Update Project Task
-              </h4>
+              <h4 className="display-4 text-center">Add Project Task</h4>
+              <p className="lead text-center">Project Name + Project Code</p>
               <form onSubmit={this.onSubmit}>
                 <div className="form-group">
                   <input
                     type="text"
                     className={classnames('form-control form-control-lg', {
-                      // makes the box red
                       'is-invalid': errors.summary
                     })}
-                    name="summary" //should be the same like in server
-                    value={this.state.summary}
+                    name="summary"
                     placeholder="Project Task summary"
+                    value={this.state.summary}
                     onChange={this.onChange}
                   />
-                  {/* gives feedback, which is defined in backend @NotBlank */}
                   {errors.summary && (
                     <div className="invalid-feedback">{errors.summary}</div>
                   )}
@@ -76,6 +90,30 @@ class AddPT extends Component {
                     onChange={this.onChange}
                   />
                 </div>
+                <h6>Due Date</h6>
+                <div className="form-group">
+                  <input
+                    type="date"
+                    className="form-control form-control-lg"
+                    name="dueDate"
+                    value={this.state.dueDate}
+                    onChange={this.onChange}
+                  />
+                </div>
+                <div className="form-group">
+                  <select
+                    className="form-control form-control-lg"
+                    name="priority"
+                    value={this.state.priority}
+                    onChange={this.onChange}
+                  >
+                    <option value={0}>Select Priority</option>
+                    <option value={1}>High</option>
+                    <option value={2}>Medium</option>
+                    <option value={3}>Low</option>
+                  </select>
+                </div>
+
                 <div className="form-group">
                   <select
                     className="form-control form-control-lg"
@@ -89,6 +127,7 @@ class AddPT extends Component {
                     <option value="DONE">DONE</option>
                   </select>
                 </div>
+
                 <input
                   type="submit"
                   className="btn btn-primary btn-block mt-4"
@@ -102,8 +141,8 @@ class AddPT extends Component {
   }
 }
 
-AddPT.propTypes = {
-  addPT: PropTypes.func.isRequired,
+AddProjectTask.propTypes = {
+  addProjectTask: PropTypes.func.isRequired,
   errors: PropTypes.object.isRequired
 };
 
@@ -113,5 +152,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { addPT }
-)(AddPT);
+  { addProjectTask }
+)(AddProjectTask);

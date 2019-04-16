@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
 
-    <title>Project Task Tool</title>
+    <title>Kanban Tool</title>
 </head>
 <!-- Spring Boot / React Students please ignore above -->
 
@@ -28,17 +28,40 @@
     <nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-4">
         <div class="container">
             <a class="navbar-brand" href="Dashboard.html">
-                Project Task Tool
+                Personal Kanban Tool
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-nav">
                 <span class="navbar-toggler-icon" />
             </button>
+
+            <div class="collapse navbar-collapse" id="mobile-nav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dashboard">
+                            Dashboard
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="register.html">
+                            Sign Up
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">
+                            Login
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <!-- Project Board Starts Here MIND OTHER COMPONENTS WHEN COPY AND PASTING -->
     <div class="container">
-        <a href="/ProjectTaskForm.html" class="btn btn-primary mb-3">
+        <a href=# class="btn btn-primary mb-3">
             <i class="fas fa-plus-circle"> Create Project Task</i>
         </a>
         <br />
@@ -57,12 +80,12 @@
                     <div class="card mb-1 bg-light">
 
                         <div class="card-header text-primary">
-                            ID: projectSequence
+                            ID: projectSequence -- Priority: priorityString
                         </div>
                         <div class="card-body bg-light">
-                            <h5 class="card-title">summary</h5>
+                            <h5 class="card-title">project_task.summary</h5>
                             <p class="card-text text-truncate ">
-                                acceptanceCriteria
+                                project_task.acceptanceCriteria
                             </p>
                             <a href=# class="btn btn-primary">
                                 View / Update
