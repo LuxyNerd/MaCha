@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29257413-4f10-4f1f-b9d3-664105ba6cfd" name="Default Changelist" comment="" />
+    <list default="true" id="29257413-4f10-4f1f-b9d3-664105ba6cfd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/server/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/New/macha/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New/macha/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New/macha/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New/macha/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New/macha/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New/macha/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New/macha/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New/macha/src/main/java/com/emineturcan/macha/MachaApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New/macha/src/main/java/com/emineturcan/macha/security/JWTAuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New/macha/src/main/java/com/emineturcan/macha/security/JWTAuthorizationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New/macha/src/main/java/com/emineturcan/macha/security/SecurityConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New/macha/src/main/java/com/emineturcan/macha/security/WebSecurity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New/macha/src/main/java/com/emineturcan/macha/task/Task.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New/macha/src/main/java/com/emineturcan/macha/task/TaskController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New/macha/src/main/java/com/emineturcan/macha/task/TaskRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New/macha/src/main/java/com/emineturcan/macha/user/ApplicationUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New/macha/src/main/java/com/emineturcan/macha/user/ApplicationUserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New/macha/src/main/java/com/emineturcan/macha/user/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New/macha/src/main/java/com/emineturcan/macha/user/UserDetailsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New/macha/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New/macha/src/test/java/com/emineturcan/macha/MachaApplicationTests.java" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,9 +54,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="789" />
+    <option name="x" value="22" />
     <option name="y" value="23" />
-    <option name="width" value="891" />
+    <option name="width" value="1658" />
     <option name="height" value="946" />
   </component>
   <component name="ProjectView">
@@ -41,8 +64,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="macha" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MaCha" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -132,17 +165,17 @@
       <workItem from="1555241561577" duration="277000" />
       <workItem from="1555241857045" duration="762000" />
       <workItem from="1555242727188" duration="846000" />
+      <workItem from="1555492102043" duration="9000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1885000" />
+    <option name="totallyTimeSpent" value="1894000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="789" y="23" width="891" height="946" extended-state="0" />
-    <editor active="true" />
+    <frame x="22" y="23" width="1658" height="946" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.41696113" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2240099" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
