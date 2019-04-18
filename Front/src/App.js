@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Dashboard from './components/Dashboard';
 import Header from './components/Layout/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -14,7 +13,6 @@ import jwt_decode from 'jwt-decode';
 import setJWTToken from './securityUtils/setJWTToken';
 import { SET_CURRENT_USER } from './actions/types';
 import { logout } from './actions/securityActions';
-import SecuredRoute from './securityUtils/SecureRoute';
 
 const jwtToken = localStorage.jwtToken;
 
