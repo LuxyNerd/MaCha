@@ -16,9 +16,9 @@ class Landing extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-12 text-center">
-                <h1 className="display-3 mb-4">Have just one!</h1>
+                <h1 className="display-3 mb-4">*** MaCha ***</h1>
                 <p className="lead">
-                  Create your account to join in other Social Media Accounts
+                  Create just one account and get the rest!
                 </p>
                 <hr />
                 <Link className="btn btn-lg btn-primary mr-2" to="/register">
