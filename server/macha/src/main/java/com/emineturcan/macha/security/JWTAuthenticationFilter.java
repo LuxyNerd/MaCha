@@ -68,6 +68,7 @@ successfulAuthentication: which is the method called when a user successfully lo
                 .sign(HMAC512(SECRET.getBytes()));
         //res.addHeader(HEADER_STRING, TOKEN_PREFIX + token);
         //res.getWriter().write("{ token: " + token + "}");
+
         JSONObject body = new JSONObject();
 
         try {

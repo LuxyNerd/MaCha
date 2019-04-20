@@ -1,3 +1,3 @@
 export const config = {
-  baseURL: 'locahost:8080'
+  baseURL: 'http://locahost:8080'
 };
