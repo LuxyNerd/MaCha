@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29257413-4f10-4f1f-b9d3-664105ba6cfd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server/macha/src/main/java/com/emineturcan/macha/user/ApplicationUserTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front/src/actions/securityActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front/src/actions/securityActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front/src/core/app.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front/src/core/app.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/New/springboot-auth-updated" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/macha/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/macha/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/macha/src/main/java/com/emineturcan/macha/security/JWTAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/macha/src/main/java/com/emineturcan/macha/security/JWTAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/macha/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/server/macha/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/macha/src/main/java/com/emineturcan/macha/security/WebSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/macha/src/main/java/com/emineturcan/macha/security/WebSecurity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/macha/src/main/java/com/emineturcan/macha/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/macha/src/main/java/com/emineturcan/macha/user/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/macha/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/macha/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,7 +30,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="22" />
     <option name="y" value="23" />
-    <option name="width" value="1658" />
+    <option name="width" value="1302" />
     <option name="height" value="946" />
   </component>
   <component name="ProjectView">
@@ -55,11 +47,6 @@
               <item name="macha" type="b2602c69:ProjectViewProjectNode" />
               <item name="MaCha" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="macha" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MaCha" type="462c0819:PsiDirectoryNode" />
-              <item name="Back" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -69,7 +56,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555790310019" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555790323865" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -104,24 +91,24 @@
       <workItem from="1555241857045" duration="762000" />
       <workItem from="1555242727188" duration="846000" />
       <workItem from="1555492102043" duration="9000" />
-      <workItem from="1555788684900" duration="1311000" />
+      <workItem from="1555788684900" duration="1386000" />
+      <workItem from="1555791660167" duration="4000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3205000" />
+    <option name="totallyTimeSpent" value="3284000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="22" y="23" width="1658" height="946" extended-state="0" />
+    <frame x="22" y="23" width="1302" height="946" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25123763" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32619047" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -134,6 +121,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.24004684" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3290398" />
+      <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -162,68 +150,22 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/services/MapValidationErrorService.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/services/CustomUserDetailsService.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/repositories/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/payload/JWTLoginSucessReponse.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/payload/LoginRequest.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/exceptions/UsernameAlreadyExistsResponse.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/exceptions/UsernameAlreadyExistsException.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/exceptions/ProjectNotFoundExceptionResponse.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/exceptions/ProjectNotFoundException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/exceptions/ProjectIdExceptionResponse.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/exceptions/ProjectIdException.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/exceptions/InvalidLoginResponse.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/services/MapValidationErrorService.java" />
+    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/services/CustomUserDetailsService.java" />
+    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/repositories/UserRepository.java" />
+    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/payload/JWTLoginSucessReponse.java" />
+    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/payload/LoginRequest.java" />
+    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/exceptions/UsernameAlreadyExistsResponse.java" />
+    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/exceptions/UsernameAlreadyExistsException.java" />
+    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/exceptions/ProjectNotFoundExceptionResponse.java" />
+    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/exceptions/ProjectNotFoundException.java" />
+    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/exceptions/ProjectIdExceptionResponse.java" />
+    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/exceptions/ProjectIdException.java" />
+    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/exceptions/InvalidLoginResponse.java" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/jshell/jshell_console.snippet">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/exceptions/CustomResponseEntityExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="77" selection-start-line="18" selection-start-column="77" selection-end-line="18" selection-end-column="77" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/exceptions/CustomResponseEntityExceptionHandler.java" />
     <entry file="file://$PROJECT_DIR$/server/macha/src/main/java/com/emineturcan/macha/user/UserDetailsServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -277,42 +219,15 @@
     <entry file="file://$PROJECT_DIR$/server/macha/src/main/java/com/emineturcan/macha/user/UserController.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/New/springboot-auth-updated/bin/.project">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Back/src/test/java/com/emineturcan/macha/MaChaApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/New/springboot-auth-updated/bin/.project" />
+    <entry file="file://$PROJECT_DIR$/Back/src/test/java/com/emineturcan/macha/MaChaApplicationTests.java" />
     <entry file="file://$PROJECT_DIR$/.gradle/5.4/gc.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/security/JwtAuthenticationEntryPoint.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/security/SecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-652" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/security/SecurityConstants.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/MaChaApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/validator/UserValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/security/JwtAuthenticationEntryPoint.java" />
+    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/security/SecurityConfig.java" />
+    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/security/SecurityConstants.java" />
+    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/MaChaApplication.java" />
+    <entry file="file://$PROJECT_DIR$/Back/src/main/java/com/emineturcan/macha/validator/UserValidator.java" />
   </component>
 </project>
