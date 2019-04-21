@@ -24,7 +24,9 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
         this.userDetailsService = userDetailsService;
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
     }
-
+    /*
+       set the SIGN_UP_URL endpoint as being public and everything else as being secured.  also configure CORS (Cross-Origin Resource Sharing) support through http.cors() and  add a custom security filter in the Spring Security filter chain.
+        */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable().authorizeRequests()

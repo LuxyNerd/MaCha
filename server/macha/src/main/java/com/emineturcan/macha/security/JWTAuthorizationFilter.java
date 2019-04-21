@@ -2,6 +2,7 @@ package com.emineturcan.macha.security;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
+import com.auth0.jwt.exceptions.SignatureVerificationException;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -20,6 +21,8 @@ import static com.emineturcan.macha.security.SecurityConstants.*;
  * filter responsible for user authorization
  */
 public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
+
+    private String token;
 
     public JWTAuthorizationFilter(AuthenticationManager authManager) {
         super(authManager);
@@ -41,24 +44,33 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
         SecurityContextHolder.getContext().setAuthentication(authentication);
         chain.doFilter(req, res);
     }
-/*
-This method reads the JWT from the Authorization header,
-and then uses JWT to validate the token.
-If everything is in place, we set the user in the SecurityContext and allow the request to move on.
- */
-    private UsernamePasswordAuthenticationToken getAuthentication(HttpServletRequest request) {
+
+    /*
+    This method reads the JWT from the Authorization header,
+    and then uses JWT to validate the token.
+    If everything is in place, we set the user in the SecurityContext and allow the request to move on.
+     */
+    private UsernamePasswordAuthenticationToken getAuthentication(HttpServletRequest request){
         String token = request.getHeader(HEADER_STRING);
+
         if (token != null) {
             // parse the token.
-            String user = JWT.require(Algorithm.HMAC512(SECRET.getBytes()))
-                    .build()
-                    .verify(token.replace(TOKEN_PREFIX, ""))
-                    .getSubject();
 
+            String user;
+            try {
+                user = JWT.require(Algorithm.HMAC512(SECRET.getBytes()))
+                        .build()
+                        .verify(token.replace(TOKEN_PREFIX, ""))
+                        .getSubject();
+
+            } catch (SignatureVerificationException e) {
+                return null;
+            }
             if (user != null) {
                 return new UsernamePasswordAuthenticationToken(user, null, new ArrayList<>());
             }
             return null;
+
         }
         return null;
     }

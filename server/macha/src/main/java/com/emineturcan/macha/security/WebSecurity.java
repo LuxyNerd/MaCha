@@ -11,7 +11,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+
 import static com.emineturcan.macha.security.SecurityConstants.SIGN_UP_URL;
+
 import com.emineturcan.macha.user.UserDetailsServiceImpl;
 
 @EnableWebSecurity
@@ -25,6 +27,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
     }
 
     /*
+    define which resources are public and which are secured.
     set the SIGN_UP_URL endpoint as being public and everything else as being secured.  also configure CORS (Cross-Origin Resource Sharing) support through http.cors() and  add a custom security filter in the Spring Security filter chain.
      */
     @Override
@@ -39,11 +42,18 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
 
+    /*
+    custom implementation of UserDetailsService to load user-specific data in the security framework.
+    also used this method to set the encrypt method used (BCryptPasswordEncoder).
+     */
     @Override
     public void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder);
     }
 
+    /*
+    allow/restrict CORS support. left it wide open by permitting requests from any source (/**).
+     */
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();

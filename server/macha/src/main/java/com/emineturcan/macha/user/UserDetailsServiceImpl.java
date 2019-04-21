@@ -8,6 +8,10 @@ import org.springframework.stereotype.Service;
 
 import static java.util.Collections.emptyList;
 
+/**
+ * to help Spring Security loading user-specific data in the framework,
+ * and extend the WebSecurityConfigurerAdapter class to customize the security framework to our needs.
+ */
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
     private ApplicationUserRepository applicationUserRepository;
@@ -15,7 +19,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     public UserDetailsServiceImpl(ApplicationUserRepository applicationUserRepository) {
         this.applicationUserRepository = applicationUserRepository;
     }
-/*
+
+    /*
 When a user tries to authenticate, this method receives the username, searches the database for a record containing it, and (if found) returns an instance of User
  */
     @Override

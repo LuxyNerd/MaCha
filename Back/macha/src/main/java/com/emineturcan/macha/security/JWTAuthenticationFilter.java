@@ -1,8 +1,9 @@
 package com.emineturcan.macha.security;
-
 import com.auth0.jwt.JWT;
 import com.emineturcan.macha.user.ApplicationUser;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -20,17 +21,20 @@ import java.util.Date;
 
 import static com.auth0.jwt.algorithms.Algorithm.HMAC512;
 import static com.emineturcan.macha.security.SecurityConstants.EXPIRATION_TIME;
-import static com.emineturcan.macha.security.SecurityConstants.HEADER_STRING;
 import static com.emineturcan.macha.security.SecurityConstants.SECRET;
-import static com.emineturcan.macha.security.SecurityConstants.TOKEN_PREFIX;
 
+/**
+ * Filter responsible for authenticating users
+ */
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
     private AuthenticationManager authenticationManager;
 
     public JWTAuthenticationFilter(AuthenticationManager authenticationManager) {
         this.authenticationManager = authenticationManager;
     }
-
+    /*
+   attemptAuthentication: where we parse the user's credentials and issue them to the AuthenticationManager
+     */
     @Override
     public Authentication attemptAuthentication(HttpServletRequest req,
                                                 HttpServletResponse res) throws AuthenticationException {
@@ -48,7 +52,9 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
             throw new RuntimeException(e);
         }
     }
-
+    /*
+    successfulAuthentication: which is the method called when a user successfully logs in. We use this method to generate a JWT for this user.
+     */
     @Override
     protected void successfulAuthentication(HttpServletRequest req,
                                             HttpServletResponse res,
@@ -59,6 +65,18 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
                 .withSubject(((User) auth.getPrincipal()).getUsername())
                 .withExpiresAt(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
                 .sign(HMAC512(SECRET.getBytes()));
-        res.addHeader(HEADER_STRING, TOKEN_PREFIX + token);
+        //res.addHeader(HEADER_STRING, TOKEN_PREFIX + token);
+        //res.getWriter().write("{ token: " + token + "}");
+
+        JSONObject body = new JSONObject();
+
+        try {
+            body.put("token", token);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        res.getWriter().write(body.toString());
+        res.addHeader("Content-Type", "application/json");
+
     }
 }

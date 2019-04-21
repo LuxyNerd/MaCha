@@ -1,5 +1,5 @@
 export const dummyData = {
-  username: 'Emi',
+  username: 'admin',
   password: 'admin',
   facebookId: '2080923161984321'
 };
