@@ -1,0 +1,16 @@
+package user;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+/**
+ * To manage the persistence layer of ApplicationUser's entity. This interface
+ * will be an extension of JpaRepository—which access to some common methods
+ * like save.
+ * 
+ * @author emine.turcan
+ *
+ */
+public interface ApplicationUserRepository extends JpaRepository<ApplicationUser, Long> {
+	// for authentication
+	ApplicationUser findByUsername(String username);
+}

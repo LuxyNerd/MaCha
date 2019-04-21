@@ -1,0 +1,5 @@
+package com.emineturcan.macha.JWTAuthenticationFilter;
+
+public class JWTAuthenticationFilter {
+
+}

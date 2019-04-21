@@ -1,0 +1,8 @@
+package com.emineturcan.macha;
+
+public class Snippet {
+	public static void main(String[] args) {
+		com.emineturcan.macha
+	}
+}
+

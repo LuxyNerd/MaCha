@@ -1,0 +1,11 @@
+package user;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+/**
+ * To manage the persistence layer of this entity, we will create an interface called ApplicationUserRepository. This interface will be an extension of JpaRepository—which gives us access to some common methods like save—and will be created in the same package of the ApplicationUser class:
+ * @author emine.turcan
+ *
+ */
+public interface ApplicationUserRepository extends JpaRepository<ApplicationUser, Long> {
+    ApplicationUser findByUsername(String username);
+}
